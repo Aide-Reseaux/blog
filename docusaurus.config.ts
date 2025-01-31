@@ -35,14 +35,9 @@ const config: Config = {
 		[
 			'classic',
 			{
-				docs: {
-					sidebarPath: './sidebars.ts',
-					// Please change this to your repo.
-					// Remove this to remove the "edit this page" links.
-					editUrl:
-						'https://github.com/Aide-Reseaux/blog/tree/main/docs/',
-				},
+				docs: false,
 				blog: {
+					routeBasePath: '/',
 					showReadingTime: true,
 					feedOptions: {
 						type: ['rss', 'atom'],
@@ -75,13 +70,6 @@ const config: Config = {
 			},
 			items: [
 				{
-					type: 'docSidebar',
-					sidebarId: 'tutorialSidebar',
-					position: 'left',
-					label: 'Tutorial',
-				},
-				{to: '/blog', label: 'Blog', position: 'left'},
-				{
 					href: 'https://github.com/Aide-Reseaux/blog',
 					label: 'GitHub',
 					position: 'right',
@@ -92,11 +80,11 @@ const config: Config = {
 			style: 'dark',
 			links: [
 				{
-					title: 'Docs',
+					title: 'Blog',
 					items: [
 						{
-							label: 'Tutorial',
-							to: '/docs/intro',
+							label: 'Page d\'accueil',
+							to: '/',
 						},
 					],
 				},
@@ -131,23 +119,6 @@ const config: Config = {
 							label: 'Kick',
 							href: 'https://kick.com/AideReseaux'
 						}
-					],
-				},
-				{
-					title: 'Voir plus',
-					items: [
-						{
-							label: 'Blog',
-							to: '/blog',
-						},
-						{
-							label: 'Docs',
-							to: '/docs/intro',
-						},
-						{
-							label: 'GitHub',
-							href: 'https://github.com/Aide-Reseaux/blog',
-						},
 					],
 				},
 			],
